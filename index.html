@@ -54,9 +54,45 @@
                     <div class="backdrop is-hidden" data-modal>
                         <div class="modal">
                         <button class="close-btn" data-modal-close>
-                            <img src="./images/close.svg" alt="close" width="30" height="30">
+                            <svg class="form-close">
+                                <use href="./images/icons.svg#icon-close"></use>
+                            </svg>
                         </button>
-                        <form action=""></form>
+                        <form class="form-main" name="signup_form" autocomplete="on" novalidate>
+                            <h2 class="form-title">Оставьте свои данные, мы вам перезвоним</h2>
+                            <div class="form-field">
+                                <label class="form-label">Имя</label>
+                                <input class="form-input" type="text" name="name" />
+                                <svg class="form-icon">
+                                    <use href="./images/icons.svg#icon-man"></use>
+                                </svg>
+                            </div>
+                            <div class="form-field">
+                                <label class="form-label">Телефон</label>
+                                <input class="form-input" type="tel" name="phone" />
+                                <svg class="form-icon">
+                                    <use href="./images/icons.svg#icon-phone-modal"></use>
+                                </svg>
+                            </div>
+                            <div class="form-field">
+                                <label class="form-label">Почта</label>
+                                <input class="form-input" type="mail" name="email" />
+                                <svg class="form-icon">
+                                    <use href="./images/icons.svg#icon-mail"></use>
+                                </svg>
+                            </div>
+                            <div class="form-field form-text">
+                                <label class="form-label">Комментарий</label>
+                                <textarea class="textarea" name="feedback" rows="5" placeholder="Введите текст"></textarea>
+                            </div>
+                            <div class="check-policy">
+                                <label class="policy-text">
+                                    <input type="checkbox" name="policy" value="confirmed" />
+                                    Соглашаюсь с рассылкой и принимаю <a href="" class="policy-link">Условия договора</a>
+                                </label>
+                            </div>
+                            <button type="submit" class="policy-button">Отправить</button>
+                        </form>
                         </div>
                     </div>
                 
