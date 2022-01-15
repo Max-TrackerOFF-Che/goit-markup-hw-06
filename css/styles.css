@@ -247,7 +247,7 @@ img {
   cursor: pointer;
 }
 /* Модальное окно */
-
+/* 
 .form-main {
   width: 528px;
   margin-left: auto;
@@ -281,17 +281,7 @@ img {
   font-size: 12px;
   line-height: 1;
 }
-.form-icon {
-  position: absolute;
-  top: 16px;
-  left: 15px;
 
-  display: inline-block;
-  width: 12px;
-  height: 12px;
-
-  fill: var(--primary-text-color);
-}
 .form-input,
 .textarea {
   margin-top: 4px;
@@ -301,6 +291,10 @@ img {
   border-radius: 4px;
   width: 100%;
 }
+.textarea {
+  padding: 12px 16px;
+}
+
 .form-text {
   margin-bottom: 20px;
 }
@@ -319,21 +313,16 @@ img {
 }
 .policy-link {
   text-decoration: underline;
+  font-weight: bold;
+  color: var(--hover-effect);
 }
-.policy-button {
-  background-color: var(--hover-effect);
-  color: var(--background-color);
-  margin: 0 auto;
-  width: 200px;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.6;
-  text-align: center;
-  border: none;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  padding: 10px 32px;
+
+.form-input:focus {
+  border: 1px solid var(--hover-effect);
 }
+.form-input:focus + .form-icon {
+  fill: var(--hover-effect);
+} */
 
 /* Стили заголовка и текста на странице Cтудия */
 /* Перечисление особенностей на странице Студия */
@@ -709,6 +698,8 @@ img {
 
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+/* Модальное окно */
 .modal {
   position: absolute;
   top: 50%;
@@ -721,25 +712,159 @@ img {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+  padding: 40px;
+  /* text-align: left; */
 }
 .close-btn {
   width: 30px;
   height: 30px;
-  background-color: var(--background-color);
+  border-radius: 50%;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  font-size: 1.5em;
+  transition: 0.3 var(--cubic-transition) var(--hover-effect);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.close-btn:hover {
+  color: var(--hover-effect);
+}
+.modal-form {
+  margin-top: 12px;
+}
+.modal-title {
+  font-size: 20px;
+  line-height: 1.1;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: var(--primary-text-color);
+}
+.form-input-box {
+  display: block;
+  margin-bottom: 28px;
+  font-size: 15px;
+  color: var(--secondary-text-color);
+
+  position: relative;
+  text-align: left;
+}
+
+.form-input,
+.form-comment {
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  height: 40px;
+  width: 100%;
+  margin-top: 4px;
+  padding: 0 10px 0 35px;
+  transition: 250ms var(--cubic-transition) border;
+}
+.form-input:focus,
+.form-comment:focus {
+  outline: none;
+  border: 1px solid var(--hover-effect);
+}
+.form-input:focus + .form-icon {
+  fill: var(--hover-effect);
+}
+.form-comment {
+  font-family: inherit;
+  resize: none;
+  height: 120px;
+
+  padding: 12px 16px;
+}
+.form-comment::placeholder {
+  color: rgba(117, 117, 117, 0.5);
+}
+.form-icon {
+  position: absolute;
+  display: block;
+  top: 55%;
+  left: 15px;
+
+  transition: 250ms var(--cubic-transition) fill;
+}
+.icon-phone-modal {
+  width: 13px;
+  height: 13px;
+}
+.icon-mail {
+  width: 15px;
+  height: 13px;
+}
+
+.icon-man {
+  width: 12px;
+  height: 12px;
+}
+.policy-box {
+  font-size: 14px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  color: var(--secondary-text-color);
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.policy-link {
+  text-decoration: underline;
+  color: var(--hover-effect);
+}
+
+.policy-checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+.policy-box::before {
+  content: '';
+  width: 16px;
+  height: 16px;
+  border: 1px solid var(--primary-text-color);
+  border-radius: 2px;
+  margin-right: 7px;
+}
+.policy-checkbox:checked + .policy-box:before {
+  background-color: var(--hover-effect);
+  background-image: url(../images/checkbox.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.policy-checkbox:focus + .policy-box:before {
+  border: 2px solid var(--hover-effect);
+}
+.modal-button {
+  background-color: var(--hover-effect);
+  color: var(--background-color);
+  width: 200px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.6;
   border: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  padding: 10px 55px;
   cursor: pointer;
 }
-.form-close {
-  width: 30px;
-  height: 30px;
-  position: absolute;
-  right: 8px;
-  top: 8px;
-
-  border: 1px solid var(--secondary-text-color);
-  border-radius: 50%;
-  padding: 5px;
+.modal-button:hover,
+.modal-button:focus {
+  background-color: #188ce8;
 }
+
 .thumb {
   position: relative;
 
@@ -776,6 +901,8 @@ img {
   padding-right: 90px;
   padding-left: 91px;
 }
+
+/* Страница контактов */
 .test {
   width: 1200px;
   height: 1200px;
