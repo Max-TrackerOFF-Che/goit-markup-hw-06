@@ -748,8 +748,6 @@ img {
   background-color: #188ce8;
 }
 .button-icon {
-  background: url(../images/send.svg) no-repeat top left;
-  background-size: contain;
   cursor: pointer;
   display: inline-block;
   width: 24px;
