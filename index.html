@@ -55,29 +55,29 @@
                         <div class="modal">
                             <button class="close-btn" data-modal-close>&#xd7;</button>
                             <b class="modal-title">Оставьте свои данные, мы вам перезвоним</b>
-                            <form action="" class="modal-form">
+                            <form class="modal-form">
                                 <label for="name" class="form-input-box"> 
                                     Имя
-                                    <input type="text" name="user-name" class="form-input">
+                                    <input type="text" name="user-name" class="form-input" id="name">
                                     <svg class="form-icon icon-man">
                                         <use href="./images/icons.svg#icon-man"></use>
                                     </svg>
                                 </label>
                                 <label for="tel" class="form-input-box"> 
                                     Телефон
-                                    <input type="text" name="user-phone" class="form-input">
+                                    <input type="text" name="user-phone" class="form-input" id="tel">
                                     <svg class="form-icon icon-phone-modal">
                                         <use href="./images/icons.svg#icon-phone-modal"></use>
                                     </svg>
                                 </label>
                                 <label for="email" class="form-input-box"> Почта
-                                    <input type="text" name="user-email" class="form-input">
+                                    <input type="text" name="user-email" class="form-input" id="email">
                                     <svg class="form-icon icon-mail">
                                         <use href="./images/icons.svg#icon-mail"></use>
                                     </svg>
                                 </label>
-                                <label for="name" class="form-input-box"> Комментарий
-                                    <textarea name="form-comment" id="" class="form-comment" placeholder="Введите текст"></textarea>
+                                <label class="form-input-box"> Комментарий
+                                    <textarea name="form-comment" class="form-comment" placeholder="Введите текст"></textarea>
                                 </label>
                                 <input type="checkbox" class="policy-checkbox" id="check-policy">
                                 <label for="check-policy" class="policy-box">Соглашаюсь с рассылкой и принимаю &nbsp;<a href="" class="policy-link">Условия договора</a>
@@ -393,10 +393,10 @@
             </ul>
         </div>
             <div class="subscribe-main">
-                <form action="" class="subscribe-form">
+                <form class="subscribe-form">
                     <h2 class="footer-title">Подпишитесь на рассылку</h2>
                         <div class="footer-input">
-                            <label class="subscribe-text" for="user-email">
+                            <label class="subscribe-text">
                                 <input class="subscribe-input" type="email">
                             </label>
                             <button class="subscribe-button">

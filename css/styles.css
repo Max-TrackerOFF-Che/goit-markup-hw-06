@@ -623,7 +623,7 @@ img {
 }
 /* Секция подписки в футере */
 .subscribe-main {
-  margin-left: 93px;
+  margin-left: auto;
 }
 .footer-input {
   display: flex;
@@ -726,8 +726,9 @@ img {
 }
 .form-input-box {
   display: block;
-  margin-bottom: 28px;
-  font-size: 15px;
+  margin-bottom: 10px;
+  font-size: 12px;
+  line-height: 1.1;
   color: var(--secondary-text-color);
 
   position: relative;
